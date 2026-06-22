@@ -115,34 +115,34 @@ One pair of input bits is processed during each iteration.
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```text
 Verilog_Square_Root_Algorithms
 │
 ├── BINARY SEARCH
-│   ├── binary_search.v
-│   ├── binary_search_tb.v
-│   └── waveform.png
+│   ├── datapath.v
+│   ├── controller.v
+│   ├── testbench.v
+│   └── BINARY SEARCH.png
 │
-├── LOOKUP_TABLE
-│   ├── lut.v
-│   ├── lut_tb.v
-│   └── waveform.png
+├── LOOKUP TABLE
+│   ├── sr_lut.v
+│   ├── sr_lut_tb.v
+│   └── LOOKUP TABLE.png
 │
-├── NEWTON_RAPHSON
+├── NEWTON RAPHSON
 │   ├── newton_raphson.v
 │   ├── newton_raphson_tb.v
-│   └── waveform.png
+│   └── NEWTON RAPHSON.png
 │
-├── NON_RESTORING
+├── NON RESTORING
 │   ├── non_restoring.v
 │   ├── non_restoring_tb.v
-│   └── waveform.png
+│   └── NON RESTORING.png
 │
 └── README.md
 ```
-
 ---
 
 # Tools Used
