@@ -115,6 +115,66 @@ One pair of input bits is processed during each iteration.
 
 ---
 
+# FPGA Implementation
+
+All architectures were synthesized and implemented using
+
+- **AMD Vivado Design Suite 2025.2**
+- **Target FPGA:** Artix-7 (xc7a35tcpg236-1)
+
+The following implementation flow was performed for every architecture:
+
+- Behavioral Simulation
+- RTL Synthesis
+- RTL Schematic Generation
+- Synthesized Schematic Inspection
+- Place and Route (Implementation)
+- FPGA Resource Utilization Analysis
+- Timing Analysis (Clocked Architectures)
+
+---
+
+# Hardware Resource Comparison
+
+| Algorithm | Slice LUTs | Slice Registers | Timing Status |
+|------------|-----------:|----------------:|---------------|
+| Binary Search | 104 | 42 | Meets 100 MHz Timing |
+| Newton-Raphson | 117 | 26 | Timing Constraint Not Met |
+| Non-Restoring | 19 | 25 | Meets 100 MHz Timing |
+| Lookup Table | 6 | 0 | Not Applicable (Combinational Design) |
+
+---
+
+# Hardware Observations
+
+### Binary Search
+
+- Moderate FPGA resource utilization
+- Separate datapath and controller increase register usage
+- Successfully meets the 100 MHz timing constraint
+
+### Lookup Table
+
+- Lowest combinational hardware requirement
+- Pure combinational implementation
+- Timing analysis is not applicable since the design contains no clocked elements
+
+### Newton-Raphson
+
+- Highest LUT utilization
+- Hardware divider significantly increases combinational complexity
+- Does not satisfy the 100 MHz timing constraint
+
+### Non-Restoring
+
+- Most hardware-efficient sequential architecture
+- Very low LUT utilization
+- Successfully meets timing requirements
+
+---
+
+---
+
 ## Repository Structure
 
 ```text
@@ -148,6 +208,7 @@ Verilog_Square_Root_Algorithms
 # Tools Used
 
 - Verilog HDL
+- AMD Vivado Design Suite 2025.2
 - Icarus Verilog
 - GTKWave
 - Visual Studio Code
