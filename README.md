@@ -277,65 +277,39 @@ comfortably. No division or multiplication hardware is present.
 ---
 
 ## Repository Structure
+
+```
 Verilog_Square_Root_Algorithms
-
 │
-
 ├── BINARY SEARCH
-
 │   ├── datapath.v
-
 │   ├── controller.v
-
 │   ├── testbench.v
-
 │   ├── top_module.v
-
-│   ├── BINARY SEARCH.png         (simulation waveform)
-
-│   └── schematic_binary.png      (synthesized schematic)
-
+│   └── BINARY SEARCH.png         (simulation waveform)
 │
-
-├── LOOKUP TABLE
-
+├── LOOKUP_TABLE
 │   ├── sr_lut.v
-
 │   ├── sr_lut_tb.v
-
-│   ├── LOOKUP TABLE.png          (simulation waveform)
-
-│   └── schematic_lut.png         (synthesized schematic)
-
+│   └── LOOKUP TABLE.png          (simulation waveform)
 │
-
-├── NEWTON RAPHSON
-
+├── NEWTON_RAPHSON
 │   ├── newton_raphson.v
-
 │   ├── newton_raphson_tb.v
-
-│   ├── NEWTON RAPHSON.png        (simulation waveform)
-
-│   └── schematic_newton.png      (synthesized schematic)
-
+│   └── NEWTON RAPHSON.png        (simulation waveform)
 │
-
-├── NON RESTORING
-
+├── NON_RESTORING
 │   ├── non_restoring.v
-
 │   ├── non_restoring_tb.v
-
-│   ├── NON RESTORING.png         (simulation waveform)
-
-│   └── schematic_nonrestoring.png (synthesized schematic)
-
+│   └── NON RESTORING.png         (simulation waveform)
 │
-
+├── schematic_binary.png           (Binary Search synthesized schematic)
+├── schematic_lut.png              (LUT synthesized schematic)
+├── schematic_newton.png           (Newton-Raphson synthesized schematic)
+├── schematic_nonrestoring.png     (Non-Restoring synthesized schematic)
+│
 └── README.md
-
----
+```
 
 ## Tools Used
 
