@@ -187,7 +187,7 @@ elements.
 ## Synthesized Schematics
 
 ### LUT-Based
-![LUT Schematic](LOOKUP TABLE/schematic_lut.png)
+![LUT Schematic](schematic_lut.png)
 
 Vivado compressed the entire 256-entry case statement into 6 LUTs using 
 boolean optimization. Input bits enter through IBUFs, pass through LUT 
@@ -196,7 +196,7 @@ logic, and exit through OBUFs — no registers or clock required.
 ---
 
 ### Binary Search
-![Binary Search Schematic](BINARY SEARCH/schematic_binary.png)
+![Binary Search Schematic](schematic_binary.png)
 
 The schematic clearly shows two distinct blocks — DP (Datapath) and CT 
 (Controller) — with control signals flowing between them, exactly matching 
@@ -205,7 +205,7 @@ the designed Controller-Datapath architecture.
 ---
 
 ### Newton-Raphson
-![Newton-Raphson Schematic](NEWTON RAPHSON/schematic_newton.png)
+![Newton-Raphson Schematic](schematic_newton.png)
 
 The wide, dense horizontal chain of logic visually explains why timing 
 fails — the hardware divider creates a long combinational critical path 
@@ -214,7 +214,7 @@ that cannot be traversed within a single 10 ns clock cycle at 100 MHz.
 ---
 
 ### Non-Restoring
-![Non-Restoring Schematic](NON RESTORING/schematic_nonrestoring.png)
+![Non-Restoring Schematic](schematic_nonrestoring.png)
 
 Despite appearing complex, the schematic shows many registers with short 
 combinational paths between them — the key reason timing passes 
