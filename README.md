@@ -111,9 +111,8 @@ The following flow was performed for every architecture:
 1. Behavioral Simulation (Icarus Verilog + GTKWave)
 2. RTL Synthesis (Vivado)
 3. Synthesized Schematic Inspection
-4. Place and Route (Implementation)
-5. FPGA Resource Utilization Analysis
-6. Static Timing Analysis (clocked architectures only)
+4. FPGA Resource Utilization Analysis
+5. Static Timing Analysis (clocked architectures only)
 
 ---
 
