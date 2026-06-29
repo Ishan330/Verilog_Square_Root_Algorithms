@@ -4,8 +4,7 @@ This project implements, simulates, and synthesizes four different hardware
 architectures for computing the square root of an 8-bit unsigned integer 
 using Verilog HDL, targeting the Xilinx Artix-7 FPGA.
 
-Unlike typical simulation-only projects, all architectures were synthesized 
-on the same FPGA target using AMD Vivado 2025.2, and compared using real 
+All architectures were synthesized on the same FPGA target using AMD Vivado 2025.2, and compared using real 
 hardware metrics — FPGA resource utilization (LUTs, Flip-Flops) and static 
 timing analysis. This enables a meaningful architectural trade-off comparison 
 grounded in actual hardware evidence rather than theoretical estimates.
