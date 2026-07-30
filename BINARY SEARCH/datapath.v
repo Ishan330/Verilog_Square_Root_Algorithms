@@ -1,8 +1,9 @@
 // datapath code
-module datapath(clk,ldLOW,ldHIGH,ldMID2,ldN,clrLOW,clrHIGH,clrMID2,clrN,eq,mid,n,low_sel,high_sel,data_in);
+module datapath(clk,ldLOW,ldHIGH,ldMID2,ldN,clrLOW,clrHIGH,clrMID2,clrN,eq,mid,n,low_sel,high_sel,data_in,low_gt_high);
 input clk,ldLOW,ldHIGH,ldMID2,ldN,clrLOW,clrHIGH,clrMID2,clrN,low_sel,high_sel;
 input [7:0] data_in;
 output eq,mid,n;
+output low_gt_high;
 wire [7:0] L1,L2,H1,H2,M3,N;
 wire [15:0] M1,M2;
 PIPO_l_h LOW(clk,ldLOW,clrLOW,L2,L1);
@@ -13,6 +14,7 @@ comp COMP(M2,N,mid,n,eq);
 mid2 MID2(L1,H1,M1,M3);
 assign L2 = (low_sel)  ? (M3 + 1) : 8'b0;
 assign H2 = (high_sel) ? (M3 - 1) : N;
+assign low_gt_high = (L1 > H1);
 endmodule
 
 module n_reg(clk,ld,clr,in,out);
